@@ -11,7 +11,7 @@ import { IDocument } from '../interfaces';
 @Injectable()
 export class DataService {
 
-    private url : string = ''; // replace cloudant url
+    private url : string = '';
 
     constructor(private _http : Http){}
 
@@ -28,19 +28,13 @@ export class DataService {
     }
 
   private getHeaders(){
-    let username : string = ''; // replace username
-    let password : string = ''; // replace password
+    let username : string = '';
+    let password : string = '';
     let headers = new Headers();
-    // headers.append('Accept', 'application/json');
-    // headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
     headers.append('Content-Type', 'application/json');
     //headers.append('Access-Control-Allow-Origin', '*');
-    headers.append("Authorization", "Basic " + (username + ":" + password));
-
-
-
-    // headers.append('Username', 'c9796750-50f1-4634-b245-dbdb45cbfc5c-bluemix');
-    // headers.append('Password', '43087548956f5a8808f315a090dcc9129e4db517678cee01f3f88257b664ed47');
+    //headers.append("Authorization", "Basic " + (username + ":" + password));
     return headers;
   }
 }
