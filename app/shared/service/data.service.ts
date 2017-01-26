@@ -11,7 +11,7 @@ import { IDocument } from '../interfaces';
 @Injectable()
 export class DataService {
 
-    private url : string = '';
+    private url : string = 'https://username-from-bluemix:password-bluemix@username-from-bluemix.cloudant.com/concert/_all_docs';
 
     constructor(private _http : Http){}
 
